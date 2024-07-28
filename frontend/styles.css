@@ -31,11 +31,15 @@ header,main,footer{
     width: 100%;
 }
 
+p{
+    font-size: 1.05em;
+}
+
 header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 14px;
+    gap: 8px;
 }
 
 nav{
@@ -73,6 +77,7 @@ section{
 
 .stats-Container{
     display: flex;
+    flex-direction: column;
     align-items: stretch;
     gap: 24px;
 }
@@ -80,7 +85,7 @@ section{
 
 .img-Container{
     border-radius: 100%;
-    max-width: 160px;
+    max-width: 114px;
     overflow: hidden;
 }
 
@@ -91,12 +96,71 @@ section{
 }
 
 .stats{
-    display: flex;
+    display:flex;
     flex-direction: column;
+    gap: 14px;
 }
-.stats div{
+.stats>div{
     flex: 1;
     display: flex;
     align-self: center;
+    gap: 10px;
+}
+.stats div i{
+    font-size: 1.5em;
+}
+
+.stats div div{
+    display: grid;
+    place-items: center;
+    min-width: 40px;
+}
+.about-Me{
+    line-height: 1.5em;
+}
+.outreach{
+    display:flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-right: auto;
+    width:fit-content;
+}
+.outreach:hover{
+    opacity: 0.7;
+}
+.outreach i{
+    transform: rotate(-45deg);
+}
+
+.project-Container{
+    display:flex;
+    flex-direction: column;
     gap: 24px;
+}
+.header-text{
+    margin-bottom: 24px;
+}
+.project-entry{
+    display:flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.project-entry div:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+@media (min-width: 640px){
+    .stats{
+        gap: 0px;
+    }
+    .stats-Container{
+        flex-direction: row;
+    }
+    .about-Me{
+        width: 80%;
+        margin-right: auto;
+    }
 }
